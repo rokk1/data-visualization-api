@@ -1,4 +1,4 @@
-package com.example.DataVisualizationAPI.service.api;
+package com.example.DataVisualizationAPI.api;
 
 public class Bar implements IBar {
 
