@@ -2,16 +2,30 @@ package com.example.DataVisualizationAPI.service.controllers;
 
 import com.example.DataVisualizationAPI.api.Bar;
 import com.example.DataVisualizationAPI.api.IBar;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+import java.util.HashSet;
+import java.util.Set;
+
+@RestController
 public class BarController {
 
-    public static void main(String[] args) {
-
-        IBar bar = new Bar(50, 250, "blue");
-        System.out.println("Bar :" + bar.toString());
-
+    @GetMapping("/bars")
+    public Set<IBar> getBars() {
+        Set<IBar> bars = new HashSet<>();
+        bars.add(new Bar(
+                50,
+                250,
+                "#FE4200"
+        ));
+        bars.add(new Bar(
+                50,
+                130,
+                "#C0C0C0"
+        ));
+        return bars;
     }
 
 }
