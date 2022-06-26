@@ -16,14 +16,14 @@ public class BarController {
     public Set<IBar> getBars() {
         Set<IBar> bars = new HashSet<>();
         bars.add(new Bar(
-                50,
-                250,
-                "#FE4200"
+                2,
+                5,
+                "grey"
         ));
         bars.add(new Bar(
-                50,
-                130,
-                "#C0C0C0"
+                2,
+                3,
+                "blue"
         ));
         return bars;
     }
